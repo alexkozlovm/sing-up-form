@@ -19,7 +19,7 @@ form {
     justify-content: center ;
     opacity: 0.9;
     background-color: black;
-    width: 50vw;
+    width: 60vw;
     padding: 20px;
     border-radius: 10px;
 }
@@ -35,6 +35,7 @@ input {
     font-size: 1.3rem;
     position: relative;
     bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 div {
     padding: 5px;
@@ -43,10 +44,34 @@ div {
 h1 {
     margin-top: 1rem;
     font-size: 2.75rem;
+    color: rgba(104, 126, 255, 0.95);
+}
+a {
+    color: rgba(104, 126, 255, 0.95);
+    text-decoration: solid;
+}
+p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.822)
+}
+button {
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(43, 12, 196, 0.95);
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: white;
 }
 
 @media (min-width: 1750px) {
     form {
-        width: 30vw;
+        width: 35vw;
+    }
+}
+@media (max-width: 750px) {
+    form {
+        width: 90vw;
     }
 }
