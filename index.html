@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <form action="./success.html" method="post">
       <h1>Sign Up For My Product</h1>
       <div>
         <img src="./images/user.png" alt="user icon" />
-        <input type="text" name="name" placeholder="Full Name" />
-        <br>
-        <img src="/images/envelope.png" alt="mail icon">
-        <input type="email" name="email" placeholder="Email" />
-        <br>
-        <img src="images/lock.png" alt="password icon">
-        <input type="password" name="password" placeholder="Password" />
-        <br>
-        <img src="images/lock.png" alt="password icon">
+        <input id="name" required type="text" name="name" placeholder="Full Name" pattern="[A-Za-z\s]+" />
+        <br />
+        <img src="/images/envelope.png" alt="mail icon" />
+        <input required type="email" name="email" placeholder="Email" />
+        <br />
+        <img src="images/lock.png" alt="password icon" />
         <input
+        id="password"
+          required
+          min-length="8"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+        <br />
+        <img src="images/lock.png" alt="password icon" />
+        <input
+        id="confirm-password"
+          min-length="8"
+          required
           type="password"
           name="confirm-password"
           placeholder="Confirm Password"
@@ -30,7 +41,7 @@
         By signing up, you are agreeing to our
         <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
       </p>
-      <button type="submit">Continue</button>
+      <button id="submit-button" type="submit">Continue</button>
       <p>Already have an account? <a href="#">Login</a></p>
     </form>
   </body>
