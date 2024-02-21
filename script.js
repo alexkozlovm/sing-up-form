@@ -39,6 +39,12 @@ function validateForm() {
     return isValid;
 }
 
+function submitForm() {
+    // Submit the form
+    alert("Form submitted successfully");
+    location.reload(); // Reload the page to clear the form
+}
+
 // Example usage:
 // Add an event listener to the form submit button or form submit event
 // For example, assuming you have a form with id "signup-form" and a submit button with id "submit-button"
@@ -48,6 +54,6 @@ const submitButton = document.getElementById('submit-button');
 submitButton.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent form submission if validation fails
     if (validateForm()) {
-        form.submit(); // Submit the form if validation passes
+        submitForm(); // Submit the form if validation passes
     }
 });
